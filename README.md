@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### Demo
+[https://muneebgulzar.github.io/text-playground/](https://muneebgulzar.github.io/text-playground/)
 ### `npm start`
 
 Runs the app in the development mode.\
