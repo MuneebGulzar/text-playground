@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../styles/Form.css'
 const Form = () => {
 
@@ -11,9 +11,8 @@ const Form = () => {
 
     const handleOnChange = (e) => {
         setInputText(e.target.value)
-        setCharacter(inputText.length + 1);
-        setWords(inputText.split(' ').length)
-        // console.log(inputText)
+        setCharacter(e.target.value.length);
+        setWords(e.target.value == '' ? 0 : e.target.value.split(' ').length)
     }
 
     const handleToLowerCase = () => {
@@ -38,7 +37,11 @@ const Form = () => {
 
     const handleToClear = () => {
         setInputText('');
+        setCharacter(0)
+        setWords(0)
     }
+
+    
     return (
 
         <div className='container'>
@@ -46,8 +49,8 @@ const Form = () => {
                 <textarea autoFocus placeholder='Write your text here...' value={inputText} onChange={handleOnChange} />
             </div>
             <div className="hints">
-            <p>{character} characters</p>
-            <p>{words} words</p>
+            <p>{character <= 1 ? character + ' character' : character + ' characters'}</p>
+            <p>{words <= 1 ? words + ' word' : words + ' words'}</p>
             </div>
 
             <div className="buttons">
