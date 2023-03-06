@@ -1,0 +1,18 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+a{
+    color: grey;
+}
+a:hover{
+    transform: scale(1.1);
+    transition-duration: .5s;
+}

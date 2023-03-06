@@ -1,9 +1,10 @@
 .container{
-    width: 90vw;
+    width: 100vw;
     height: 35vh;
     margin-block: 3rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     padding: 1rem;
@@ -43,7 +44,7 @@ button:hover{
 }
 
 @media screen and (min-width: 1280px){
-    .container{
+    .textarea-container{
         width: 50vw;
     }
 }
