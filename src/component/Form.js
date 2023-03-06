@@ -4,9 +4,15 @@ const Form = () => {
 
     const [text, setText] = useState('')
     const [inputText, setInputText] = useState('')
+    const [character, setCharacter] = useState(0);
+    const [words, setWords] = useState(0)
+
+
 
     const handleOnChange = (e) => {
         setInputText(e.target.value)
+        setCharacter(inputText.length + 1);
+        setWords(inputText.split(' ').length)
         // console.log(inputText)
     }
 
@@ -39,6 +45,10 @@ const Form = () => {
             <div className="textarea-container">
                 <textarea autoFocus placeholder='Write your text here...' value={inputText} onChange={handleOnChange} />
             </div>
+            <div className="hints">
+            <p>{character} characters</p>
+            <p>{words} words</p>
+            </div>
 
             <div className="buttons">
                 <button onClick={handleToLowerCase}>lower case</button>
@@ -46,7 +56,6 @@ const Form = () => {
                 <button onClick={handleToCapitalize}>Capitalized case</button>
                 <button onClick={handleToClear}>Clear</button>
             </div>
-
         </div>
     )
 }
