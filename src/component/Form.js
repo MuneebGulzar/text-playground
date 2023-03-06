@@ -34,17 +34,20 @@ const Form = () => {
         setInputText('');
     }
     return (
-        <>
-            <div className='container'>
+
+        <div className='container'>
+            <div className="textarea-container">
                 <textarea autoFocus placeholder='Write your text here...' value={inputText} onChange={handleOnChange} />
             </div>
+
             <div className="buttons">
                 <button onClick={handleToLowerCase}>lower case</button>
                 <button onClick={handleToUpperCase}>UPPER CASE</button>
                 <button onClick={handleToCapitalize}>Capitalized case</button>
                 <button onClick={handleToClear}>Clear</button>
             </div>
-        </>
+
+        </div>
     )
 }
 
