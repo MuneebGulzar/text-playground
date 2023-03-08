@@ -29,7 +29,6 @@ const Form = () => {
         for (let i = 0; i < ip.length; i++) {
             console.log(ip[i])
             ip[i] = ip[i].charAt(0).toUpperCase() + ip[i].slice(1);
-            console.log(ip[i])
         }
 
         setInputText(ip.join(' '))
