@@ -56,7 +56,7 @@ const Form = () => {
             <div className="buttons">
                 <button onClick={handleToLowerCase}>lower case</button>
                 <button onClick={handleToUpperCase}>UPPER CASE</button>
-                <button onClick={handleToCapitalize}>Capitalized case</button>
+                <button onClick={handleToCapitalize}>Capitalized Case</button>
                 <button onClick={handleToClear}>Clear</button>
             </div>
         </div>
